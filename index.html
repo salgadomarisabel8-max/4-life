@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Asistente de una distribuidora independiente de 4Life: productos, ingredientes y consejos de venta.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<title>Asistente 4Life · Base de conocimiento</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Asistente 4Life</h1>
+    <p>Pregunta sobre productos, precios, ingredientes o cómo vender en línea. Primero busco en tu base de conocimiento y luego respondo solo con lo que encontré, indicando de dónde salió cada dato.</p>
+    <span class="kb-count">Base de conocimiento: <b id="kbN">0</b> fragmentos</span>
+  </header>
+
+  <div class="grid">
+    <main class="panel" aria-labelledby="askTitle">
+      <h2 id="askTitle">Haz tu pregunta</h2>
+      <form class="ask" id="askForm">
+        <label for="q">Tu pregunta</label>
+        <textarea id="q" placeholder="Ej.: ¿Qué producto le recomiendo a alguien que vive en la ciudad y quiere cuidar sus pulmones?" rows="2"></textarea>
+        <button type="submit" class="btn-primary" id="sendBtn">Preguntar</button>
+      </form>
+      <div class="chips" id="chips" aria-label="Preguntas sugeridas"></div>
+      <div id="unavail" class="unavailable" hidden>Las respuestas escritas no están disponibles en esta versión del sitio. Aun así puedes buscar: verás los fragmentos de la base que responden tu pregunta.</div>
+      <div class="thread" id="thread" aria-live="polite"></div>
+    </main>
+
+    <aside class="panel" aria-labelledby="srcTitle">
+      <h2 id="srcTitle">Fragmentos recuperados</h2>
+      <div class="sources" id="sources"><p class="empty">Cuando preguntes, aquí verás los fragmentos de la base que se usaron para responder, ordenados por relevancia.</p></div>
+      <p class="how">Así funciona: tu pregunta se compara con cada fragmento (búsqueda por palabras clave, BM25), los 5 más relevantes se usan como contexto y la respuesta los cita con números.</p>
+    </aside>
+  </div>
+
+  <details class="kb">
+    <summary>Ver toda la base de conocimiento</summary>
+    <div class="kb-list" id="kbList"></div>
+  </details>
+
+  <footer><strong>Importante:</strong> los productos 4Life son suplementos alimenticios para apoyar el sistema inmune y el bienestar. No son medicina, no curan ninguna enfermedad y no sustituyen el consejo de tu médico. Estas declaraciones no han sido evaluadas por la FDA. Precios de menudeo de 4life.com (EE. UU.), consultados en septiembre de 2026; pueden cambiar. Distribuidora independiente de 4Life · <a href="https://www.4life.com/8804287" rel="noopener noreferrer" target="_blank">www.4life.com/8804287</a></footer>
+</div>
+
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>

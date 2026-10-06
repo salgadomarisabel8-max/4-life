@@ -1,0 +1,11 @@
+# Secretos: NUNCA subir
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencias y herramientas
+node_modules/
+.vercel/
+.DS_Store

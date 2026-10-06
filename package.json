@@ -1,0 +1,9 @@
+{
+  "name": "asistente-4life",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Asistente RAG de una distribuidora independiente de 4Life",
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node tests/search.test.js" }
+}
