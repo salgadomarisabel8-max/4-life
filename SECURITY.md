@@ -6,11 +6,6 @@
 - Si una clave se publica por error: revócala de inmediato en console.anthropic.com, crea otra y actualízala en Vercel. Borrar el commit no basta.
 - Configura un **límite de gasto mensual** en console.anthropic.com.
 
-## La clave de Stripe
-- `STRIPE_SECRET_KEY` se guarda solo como variable de entorno (en Vercel, o en `.env` para pruebas locales). Nunca en el código ni en un chat o correo.
-- El servidor calcula el total con sus propios precios: el navegador solo envía qué productos y cuántos.
-- Si la clave se expone, genera una nueva en dashboard.stripe.com → Developers → API keys (Roll key).
-
 ## Protecciones incluidas
 - **El servidor hace su propia búsqueda**: el navegador solo envía la pregunta, así nadie puede usar tu clave para otros fines inyectando contexto falso.
 - Instrucciones fijas en el servidor: solo temas de 4Life, sin afirmaciones médicas ni promesas de ganancias, y se ignoran intentos de cambiar las reglas.

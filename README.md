@@ -15,9 +15,6 @@ assets/app.js              Lógica del navegador
 assets/search.js           Búsqueda BM25 (compartida navegador/servidor)
 assets/kb.js               Base de conocimiento (55 fragmentos) ← edita aquí
 api/chat.js                Función serverless que llama a Claude de forma segura
-api/checkout.js            Función serverless que crea el pago con Stripe
-assets/products.js         Catálogo y precios de la tienda (salen de kb.js)
-assets/shop.js             Sección "Comprar" del navegador
 data/base_conocimiento_4life.jsonl   La misma base en formato JSONL
 tests/search.test.js       Pruebas de la búsqueda
 vercel.json                Encabezados de seguridad
@@ -31,7 +28,6 @@ vercel.json                Encabezados de seguridad
 3. En **Settings → Environment Variables** agrega:
    - `ANTHROPIC_API_KEY`: tu clave de [console.anthropic.com](https://console.anthropic.com).
    - `ALLOWED_ORIGIN`: la dirección final de tu sitio, por ejemplo `https://asistente-4life.vercel.app`.
-   - `STRIPE_SECRET_KEY`: tu clave secreta de Stripe (dashboard.stripe.com → Developers → API keys). Usa la `sk_test_...` para probar con la tarjeta de prueba `4242 4242 4242 4242`, y cámbiala por la `sk_live_...` solo cuando quieras cobrar de verdad.
 4. Pulsa **Redeploy**. Listo.
 
 ## Opción B: solo búsqueda, gratis (GitHub Pages)
@@ -52,10 +48,6 @@ git add .
 git commit -m "Asistente 4Life RAG"
 git push origin main
 ```
-
-## Pagos con tarjeta (Stripe)
-
-La sección **Comprar** usa Stripe Checkout: el cliente elige productos, paga en la página segura de Stripe y vuelve al sitio con un mensaje de confirmación. Los pagos aparecen en tu panel de Stripe (Payments), con la dirección de envío y el teléfono del cliente. Los precios salen de `assets/kb.js`; si cambias un precio ahí, también cambia en la tienda. En GitHub Pages el botón de pago no funciona (no hay servidor) y muestra el enlace a la tienda 4Life.
 
 ## Actualizar la base de conocimiento
 
