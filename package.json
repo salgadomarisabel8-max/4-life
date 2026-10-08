@@ -4,6 +4,11 @@
   "private": true,
   "type": "module",
   "description": "Asistente RAG de una distribuidora independiente de 4Life",
-  "engines": { "node": ">=20" },
-  "scripts": { "test": "node tests/search.test.js" }
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/search.test.js"
+  }
 }

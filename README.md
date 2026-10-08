@@ -19,6 +19,7 @@ api/chat.js                Función serverless que llama a Claude de forma segur
 data/base_conocimiento_4life.jsonl   La misma base en formato JSONL
 tests/search.test.js       Pruebas de la búsqueda
 vercel.json                Encabezados de seguridad
+server.js                  Servidor para Render (npm start)
 .env.example               Variables de entorno (sin valores)
 ```
 
@@ -30,6 +31,10 @@ vercel.json                Encabezados de seguridad
    - `ANTHROPIC_API_KEY`: tu clave de [console.anthropic.com](https://console.anthropic.com).
    - `ALLOWED_ORIGIN`: la dirección final de tu sitio, por ejemplo `https://asistente-4life.vercel.app`.
 4. Pulsa **Redeploy**. Listo.
+
+## Opción R: Render
+
+Servicio web de Node conectado a este repositorio: build `npm install`, start `npm start`, health check `/healthz`. Variables de entorno del servicio: `ANTHROPIC_API_KEY` (sin ella el sitio funciona en modo solo búsqueda) y `ALLOWED_ORIGIN` (la dirección .onrender.com del servicio). Cada push a `main` vuelve a desplegar.
 
 ## Opción B: solo búsqueda, gratis (GitHub Pages)
 
