@@ -18,6 +18,7 @@
   <header class="top">
     <h1>Asistente 4Life</h1>
     <p>Pregunta sobre productos, precios, ingredientes o cómo vender en línea. Primero busco en tu base de conocimiento y luego respondo solo con lo que encontré, indicando de dónde salió cada dato.</p>
+    <a class="btn-wa" data-wa="Hola, vi tu asistente 4Life y quiero más información." href="https://wa.me/13123991218" rel="noopener noreferrer" target="_blank">Escríbeme por WhatsApp · (312) 399-1218</a>
     <span class="kb-count">Base de conocimiento: <b id="kbN">0</b> fragmentos</span>
   </header>
 
@@ -49,6 +50,28 @@
     <a class="btn-store" href="https://www.4life.com/8804287" rel="noopener noreferrer" target="_blank">Comprar en www.4life.com/8804287</a>
   </section>
 
+  <section class="panel contact" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">¿Quieres que te asesore?</h2>
+    <p>Déjame tus datos y se abrirá WhatsApp con tu mensaje listo para enviar. Te contesto personalmente. Este sitio no guarda tus datos.</p>
+    <form id="contactForm" class="contact-form">
+      <label>Tu nombre
+        <input name="nombre" type="text" autocomplete="given-name" maxlength="60" required>
+      </label>
+      <label>Me interesa
+        <select name="interes">
+          <option>productos para mí</option>
+          <option>productos para mi familia</option>
+          <option>ser distribuidor(a) de 4Life</option>
+          <option>otra cosa</option>
+        </select>
+      </label>
+      <label class="wide">Mensaje (opcional)
+        <textarea name="nota" rows="2" maxlength="300" placeholder="Ej.: ¿Qué me recomiendas para toda la familia?"></textarea>
+      </label>
+      <button type="submit" class="btn-wa">Enviar por WhatsApp</button>
+    </form>
+  </section>
+
   <details class="kb">
     <summary>Ver toda la base de conocimiento</summary>
     <div class="kb-list" id="kbList"></div>
@@ -58,5 +81,6 @@
 </div>
 
 <script type="module" src="assets/app.js"></script>
+<script type="module" src="assets/contact.js"></script>
 </body>
 </html>

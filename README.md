@@ -13,6 +13,7 @@ index.html                 Página principal
 assets/styles.css          Estilos (modo claro y oscuro)
 assets/app.js              Lógica del navegador
 assets/search.js           Búsqueda BM25 (compartida navegador/servidor)
+assets/contact.js          Botón y formulario de WhatsApp (312) 399-1218
 assets/kb.js               Base de conocimiento (55 fragmentos) ← edita aquí
 api/chat.js                Función serverless que llama a Claude de forma segura
 data/base_conocimiento_4life.jsonl   La misma base en formato JSONL

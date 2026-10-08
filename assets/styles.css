@@ -69,3 +69,12 @@ footer a{color:inherit}
 .shop h2{margin-bottom:6px}.shop p{margin:0;max-width:62ch}
 .btn-store{display:inline-flex;align-items:center;min-height:52px;padding:0 22px;border-radius:12px;background:var(--deep);color:var(--on-deep);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
 .btn-store:hover{opacity:.92}
+.btn-wa{display:inline-flex;align-items:center;justify-self:start;min-height:48px;padding:0 20px;border-radius:12px;border:0;background:#1F8A4C;color:#fff;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
+.btn-wa:hover{background:#18733F}
+.contact{margin-top:22px}
+.contact>p{margin:0 0 14px;color:var(--muted);font-size:15px;max-width:70ch}
+.contact-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;align-items:end}
+.contact-form label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.contact-form .wide{grid-column:1/-1}
+.contact-form input,.contact-form select,.contact-form textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;min-height:48px;padding:10px 14px}
+.contact-form button{justify-self:start}
