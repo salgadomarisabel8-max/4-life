@@ -41,6 +41,18 @@
     </aside>
   </div>
 
+  <section class="panel shop" aria-labelledby="shopTitle">
+    <h2 id="shopTitle">Comprar</h2>
+    <p class="shop-intro">Elige tus productos y paga con tarjeta de forma segura. El pago lo procesa Stripe; este sitio nunca ve ni guarda los datos de tu tarjeta. Envíos solo dentro de EE. UU.</p>
+    <div id="shopMsg" class="shop-msg" role="status" hidden></div>
+    <div class="prod-list" id="prodList"></div>
+    <div class="shop-foot">
+      <span class="shop-total">Total: <b id="shopTotal">$0.00</b></span>
+      <button type="button" class="btn-primary" id="payBtn" disabled>Pagar con tarjeta</button>
+    </div>
+    <p id="shopErr" class="shop-err" role="alert" hidden></p>
+  </section>
+
   <details class="kb">
     <summary>Ver toda la base de conocimiento</summary>
     <div class="kb-list" id="kbList"></div>
@@ -50,5 +62,6 @@
 </div>
 
 <script type="module" src="assets/app.js"></script>
+<script type="module" src="assets/shop.js"></script>
 </body>
 </html>
